@@ -8,5 +8,5 @@ Features inplemented in this app:
   Secure Web Service endpoints with Spring Security;
   Use Amazon AWS Simple Email Service (SES) to send and request to confirm the user email address;
   Deploy the applicaiton to Apache Tomcat;
-  Deploy RESTful Web Service to AWS EC2 server;
+  Deploy RESTful Web Service to AWS EC2 server
   
