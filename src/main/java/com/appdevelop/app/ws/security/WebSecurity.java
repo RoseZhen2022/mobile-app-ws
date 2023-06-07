@@ -41,6 +41,8 @@ public class WebSecurity{
 		http.cors().and().csrf().disable().authorizeHttpRequests()
 				.requestMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_URL)
 				.permitAll()
+				.requestMatchers(HttpMethod.GET, SecurityConstants.VERIFICATION_EMAIL_URL)
+				.permitAll()
 				.anyRequest()
 				.authenticated()
 				.and()

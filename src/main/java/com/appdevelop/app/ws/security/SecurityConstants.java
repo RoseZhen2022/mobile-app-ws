@@ -10,6 +10,7 @@ public class SecurityConstants {
 	public static final String TOKEN_PREFIX="Bearer ";
 	public static final String HEADER_STRING="Authorization";
 	public static final String SIGN_UP_URL="/users";
+	public static final String VERIFICATION_EMAIL_URL="/users/email-verification";
 //	public static final String TOKEN_SECRET="fgwcqmnz4x3xvpuwu01cqwp6guzha643jmw4zd7ltovlz9j86it6t3fro6q86mgp"; //random 64 bit alphabet string
 	
 	public static String getTokenSecret() {
