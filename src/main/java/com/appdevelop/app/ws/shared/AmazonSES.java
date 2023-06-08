@@ -12,7 +12,7 @@ import com.appdevelop.app.ws.shared.dto.UserDto;
 
 public class AmazonSES {
 	//This address must be verified with Amazon SES.
-	final String FROM = "rose.dong101@gmail.com";
+	final String FROM = "xxxx@gmai.com";
 	
 	//The subject line for the email
 	final String SUBJECT = "One last step to complete your registration with PhotoApp";
@@ -34,8 +34,8 @@ public class AmazonSES {
 	
 	public void verifyEmail(UserDto userDto) {
 		
-		System.setProperty("aws.accessKeyId", "AKIAZ4NJNAYEDTYJLV4Z"); 	
-		System.setProperty("aws.secretKey", "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");
+		System.setProperty("aws.accessKeyId", "xxxxxxx"); 	
+		System.setProperty("aws.secretKey", "xxxxxxxxxxx");
 		AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard().withRegion(Regions.US_EAST_1)
 				.build();
 		
