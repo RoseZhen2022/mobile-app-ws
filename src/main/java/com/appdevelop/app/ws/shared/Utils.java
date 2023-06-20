@@ -76,6 +76,18 @@ public class Utils {
 				.compact();
 		return token;
 	}
+	
+	public String generatePasswordResetToken(String userId) {
+		byte[] keyBytes = SecurityConstants.getTokenSecret().getBytes(StandardCharsets.UTF_8);
+	    Key key = Keys.hmacShaKeyFor(keyBytes);
+	    
+		String token = Jwts.builder()
+				.setSubject(userId)
+				.setExpiration(new Date(System.currentTimeMillis() + SecurityConstants.PASSWORD_RESET_EXPIRATION_TIME))
+				.signWith(key, SignatureAlgorithm.HS512)
+				.compact();
+		return token;
+	}
 
 
 }
